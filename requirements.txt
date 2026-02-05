@@ -95,3 +95,4 @@ watchdog==6.0.0
 Werkzeug==3.1.4
 wordcloud==1.9.6
 zipp==3.23.0 on reqirement.txt
+google-search-results==1.0.9
