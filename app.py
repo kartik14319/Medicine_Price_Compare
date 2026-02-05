@@ -128,7 +128,6 @@
 
 
 
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -164,7 +163,7 @@ def compare(med_name):
 
 # Header with image
 c1, c2 = st.columns([1, 3])  # Adjust columns proportion for mobile
-c1.image("kartik.webp", use_column_width=True)
+c1.image("kartik.webp", width=150)  # Use width instead of deprecated use_column_width
 c2.header("E-Pharmacy Price Comparison System")
 
 # Sidebar for input
@@ -222,7 +221,7 @@ if st.sidebar.button("Price Compare") and med_name:
         ax.set_ylabel("Price (₹)")
         ax.set_title("Medicine Price Comparison")
         ax.tick_params(axis="x", rotation=45)
-        st.pyplot(fig, use_container_width=True)  # Makes chart responsive
+        st.pyplot(fig, use_container_width=True)
 
         st.subheader("🥧 Price Distribution (Pie Chart)")
         fig2, ax2 = plt.subplots()
@@ -233,4 +232,4 @@ if st.sidebar.button("Price Compare") and med_name:
             startangle=90
         )
         ax2.axis("equal")
-        st.pyplot(fig2, use_container_width=True)  # Responsive pie chart
+        st.pyplot(fig2, use_container_width=True)
